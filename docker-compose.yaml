@@ -1,0 +1,20 @@
+version: "3"
+
+services: 
+  api:
+    image: link-api-test
+    build: .
+    command: npm start
+    ports: 
+      - "3000:3000"
+    volumes: 
+      - .:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - "mongo"
+  mongo: 
+    image: "mongo"
+    ports:
+      - "27017:27017"
+  
+    
