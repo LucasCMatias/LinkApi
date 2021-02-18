@@ -8,13 +8,19 @@ services:
     ports: 
       - "3000:3000"
     volumes: 
-      - .:/usr/app
-      - /usr/app/node_modules
+      - .:/usr/src/app
     depends_on:
-      - "mongo"
+      - mongo
+    networks: 
+      - link-api
+
   mongo: 
-    image: "mongo"
+    image: mongo
     ports:
       - "27017:27017"
-  
-    
+    networks: 
+      - link-api
+
+networks:
+  link-api:
+    driver: bridge

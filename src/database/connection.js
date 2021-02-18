@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const logger = require('../api/utils/logger');
 require('dotenv').config();
 
 mongoose
@@ -7,23 +8,9 @@ mongoose
     useUnifiedTopology: true 
   })
   .then((data) => {
-    console.log('Connection successful', data.connection.readyState)
+    logger.info('Database connection successfull', data.connection.readyState)
   })
-  .catch((err) => console.log('Connection failed', err));
-
-// const connection = async () => {
-//   try {
-//     mongoose.connect(process.env.DB_STRING, {
-//       useNewUrlParser: true,
-//       useCreateIndex: true,
-//       useUnifiedTopology: true,
-//     });
-//   } catch (e) {
-//     console.log('Connection failed', e);
-//   }
-// }
-
-// const close = async () => mongoose.connection.close();
+  .catch((err) => logger.erro('Database connection failed', err));
 
 const database = mongoose.connection;
   
