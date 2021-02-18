@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 require('./database/connection');
+const logger = require('./api/utils/logger');
 const app = express();
 
 const apiPort = 3000;
@@ -14,4 +15,6 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));
+app.listen(apiPort, () => logger.info(`Server running on port ${apiPort}`));
+
+module.exports = app;

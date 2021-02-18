@@ -1,30 +1,33 @@
 const mongoose = require('mongoose');
+const logger = require('../api/utils/logger');
 require('dotenv').config();
 
-mongoose
-  .connect(process.env.DB_STRING, { 
-    useNewUrlParser: true, 
-    useUnifiedTopology: true 
-  })
-  .then((data) => {
-    console.log('Connection successful', data.connection.readyState)
-  })
-  .catch((err) => console.log('Connection failed', err));
+// mongoose
+//   .connect(process.env.DB_STRING, { 
+//     useNewUrlParser: true, 
+//     useUnifiedTopology: true 
+//   })
+//   .then((data) => {
+//     console.log('Connection successful', data.connection.readyState)
+//   })
+//   .catch((err) => console.log('Connection failed', err));
 
-// const connection = async () => {
-//   try {
-//     mongoose.connect(process.env.DB_STRING, {
-//       useNewUrlParser: true,
-//       useCreateIndex: true,
-//       useUnifiedTopology: true,
-//     });
-//   } catch (e) {
-//     console.log('Connection failed', e);
-//   }
-// }
+const connection = async () => {
+  try {
+    mongoose.connect(process.env.DB_STRING, {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useUnifiedTopology: true,
+    });
 
-// const close = async () => mongoose.connection.close();
+    logger.info('Succesful Database Connection')
+  } catch (e) {
+    logger.error('Connection failed', e);
+  }
+}
 
-const database = mongoose.connection;
+const close = async () => mongoose.connection.close();
+
+// const database = mongoose.connection;
   
-module.exports = database;
+module.exports = { connection, close };
