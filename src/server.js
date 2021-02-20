@@ -1,5 +1,5 @@
 const app = require('./app');
-const logger = require('./api/utils/logger');
+const logger = require('./utils/logger');
 
 const apiPort = 3000;
 
