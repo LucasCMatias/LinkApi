@@ -3,7 +3,7 @@ const { Schema } = require('mongoose');
 
 const dealSchema = new Schema({
   id: {
-    type: Number,
+    type: String,
     required: true,
   },
   title: {
