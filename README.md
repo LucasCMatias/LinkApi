@@ -1,5 +1,14 @@
 # Pipedrive Bling Integration
+<p align="center">
+  <a href="LICENSE">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-%23F8952D">
+    <img src="https://img.shields.io/github/languages/top/lucas-felinto/pipedrive-bling-integration"/>
+    <img src="https://img.shields.io/node/v/nodemon"/>
+    <img src="https://img.shields.io/github/last-commit/lucas-felinto/pipedrive-bling-integration"/>
+  </a>
+</p>
 
+---
 ## Sumário
 <h4 align="center">
   <a href="#sobre-o-projeto">Sobre</a>&nbsp;|&nbsp;
@@ -16,14 +25,14 @@ O projeto tem como objetivo integrar as plataformas [Bling](https://www.bling.co
 ## Requisitos
 
 - [Node v10+](https://nodejs.org/en/docs/) ou [Docker](https://docs.docker.com/)/[Docker-Compose](https://docs.docker.com/compose/)
-- [NPM](https://www.npmjs.com/) ou [Yarn](https://classic.yarnpkg.com/en/docs/).
+- [NPM](https://www.npmjs.com/) ou [Yarn](https://classic.yarnpkg.com/en/docs/)
 - API KEY nas plataformas [Bling](https://www.bling.com.br/home) e [Pipedrive](https://www.pipedrive.com/pt)
 
 ## Instruções
 
 ```bash
 # Clone o repositório
-git clone https://github.com/lucas-felinto/pipedrive-bling-integration
+git clone https://github.com/lucas-felinto/pipedrive-bling-integration.git
 
 # Instale as dependências
 npm install
