@@ -1,3 +1,17 @@
+# Pipedrive Bling Integration
+
+## Sumário
+<h4 align="center">
+  <a href="#information_source-about">Sobre</a>&nbsp;|&nbsp;
+  <a href="#interrobang-reason">Why this project</a>&nbsp;|&nbsp;
+  <a href="#seedling-minimal-requirements">Minimal Requirements</a>&nbsp;|&nbsp;
+  <a href="#rocket-technologies">Technologies</a>&nbsp;|&nbsp;
+  <a href="#wrench-installation">Installation</a>&nbsp;|&nbsp;
+  <a href="#arrow_right_hook-requests">Requests</a>&nbsp;|&nbsp;
+  <a href="#link-how-to-contribute">How To Contribute</a>&nbsp;|&nbsp;
+  <a href="#license">License</a>
+</h4>
+
 ## Sobre o projeto
 O projeto tem como objetivo integrar as plataformas [Bling](https://www.bling.com.br/home) e [Pipedrive](https://www.pipedrive.com/pt) através de um API RESTFul, salvando Negócios Ganhos (Won Deals) da plataforma Pipedrive como Pedidos (Orders) na plataforma Bling, além de salvar essas informações em uma collection do MongoDB.
 ## Requisitos
@@ -39,13 +53,11 @@ docker-compose up
 ```
 
 ## Iniciando a Integração
-:arrow_right_hook: 
-- GET `/integration` 
-- Iniciará a integração salvando todos os negócios ganhos na plataforma Pipedrive na plataforma Bling como pedido, além de salvar na collection "Deals" e retornando para o usuário com o status 200.
+:arrow_right_hook: GET `/integration` 
+- Iniciará a integração salvando todos os negócios ganhos na plataforma Pipedrive na plataforma Bling como pedido, além de salvar na collection "Deals" e retornando os pedidos para o usuário com o status 200.
 
 ## Endpoints
-:arrow_right_hook: 
-- GET `/deals` 
+:arrow_right_hook: GET `/deals` 
 - Retorna todos os deals realizados
 - Preview: 
 ```json
@@ -81,8 +93,7 @@ docker-compose up
 ]
 ```
 
-:arrow_right_hook: 
-- GET `/total-deals` 
+:arrow_right_hook: GET `/total-deals` 
 - Retorna o valor total somado dos deals na última data de integração
 - Preview: 
 ```json
@@ -95,9 +106,16 @@ docker-compose up
   }
 ]
 ```
-:arrow_right_hook: 
-- GET `/pipedrive-deals` 
+:arrow_right_hook: GET `/pipedrive-deals` 
 - Retorna todos os negócios ganhos na Pipedrive
 
+## :rocket: Tecnologias Usadas
 
+- [Node.js](https://nodejs.org/en/docs/)
+- [Express.js](https://expressjs.com/pt-br/)
+- [MongoDB](https://docs.mongodb.com/)
+- [Docker](https://docs.docker.com/)
+- [Docker-compose](https://docs.docker.com/compose/compose-file/)
+## License 
 
+This project is under MIT license. See the documentation [LICENSE](LICENSE) for details.
