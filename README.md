@@ -2,13 +2,12 @@
 
 ## Sumário
 <h4 align="center">
-  <a href="#information_source-about">Sobre</a>&nbsp;|&nbsp;
-  <a href="#interrobang-reason">Why this project</a>&nbsp;|&nbsp;
-  <a href="#seedling-minimal-requirements">Minimal Requirements</a>&nbsp;|&nbsp;
-  <a href="#rocket-technologies">Technologies</a>&nbsp;|&nbsp;
-  <a href="#wrench-installation">Installation</a>&nbsp;|&nbsp;
-  <a href="#arrow_right_hook-requests">Requests</a>&nbsp;|&nbsp;
-  <a href="#link-how-to-contribute">How To Contribute</a>&nbsp;|&nbsp;
+  <a href="#sobre-o-projeto">Sobre</a>&nbsp;|&nbsp;
+  <a href="#requisitos">Requisitos</a>&nbsp;|&nbsp;
+  <a href="#instruções">Instruções</a>&nbsp;|&nbsp;
+  <a href="#iniciando-a-integração">Integração</a>&nbsp;|&nbsp;
+  <a href="#endpoints">Endpoints</a>&nbsp;|&nbsp;
+  <a href="#tecnologias-usadas">Tecnologias</a>&nbsp;|&nbsp;
   <a href="#license">License</a>
 </h4>
 
@@ -109,7 +108,7 @@ docker-compose up
 :arrow_right_hook: GET `/pipedrive-deals` 
 - Retorna todos os negócios ganhos na Pipedrive
 
-## :rocket: Tecnologias Usadas
+## Tecnologias Usadas
 
 - [Node.js](https://nodejs.org/en/docs/)
 - [Express.js](https://expressjs.com/pt-br/)
