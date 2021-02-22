@@ -1,7 +1,7 @@
 const PipedriveService = require('../services/PipedriveService');
 const BlingService = require('../services/BlingService');
 const createOrder = require('../helpers/createOrder');
-const { saveDeal } = require('../repositories/dealRepository');
+const Deal = require('../repositories/dealRepository');
 const logger = require('../utils/logger');
 
 class integrateOrder {
@@ -20,13 +20,11 @@ class integrateOrder {
 
         let blingOrder = await BlingService(orderXml);
 
-        console.log(blingOrder.data.retorno.erros);
-
         let saveOrder;
 
         if (blingOrder.status === 200) {
           try {
-            saveOrder = await saveDeal(order);
+            saveOrder = await Deal.saveDeal(order);
             returnData.orders.push(saveOrder);
           } catch (e) {
             logger.error('An error has occurred saving deal:', e);
@@ -41,6 +39,8 @@ class integrateOrder {
           return res.status(500).json(returnData);
         }
       }
+
+      const saveTotalDeals = await Deal.saveTotalDeals(returnData.orders);
 
       returnData.message = 'Integration Successfully';
       returnData.status = 200;
