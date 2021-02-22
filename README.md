@@ -38,7 +38,7 @@ git clone https://github.com/lucas-felinto/pipedrive-bling-integration.git
 npm install
 
 # Crie um arquivo .env e modifique as variaveis de ambiente
-touch "DB_STRING=
+echo "DB_STRING=
 PIPEDRIVE_API_KEY=
 BLING_API_KEY=" >> .env
 # ou
