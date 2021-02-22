@@ -17,7 +17,6 @@ const saveOrder = async (orderXml) => {
 
     return order;
   } catch (e) {
-    console.log(e);
     logger.error('An error has occurred in Bling Service:', e);
     return e.message;
   }
