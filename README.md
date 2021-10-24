@@ -22,6 +22,7 @@
 
 ## Sobre o projeto
 O projeto tem como objetivo integrar as plataformas [Bling](https://www.bling.com.br/home) e [Pipedrive](https://www.pipedrive.com/pt) através de um API RESTFul, salvando Negócios Ganhos (Won Deals) da plataforma Pipedrive como Pedidos (Orders) na plataforma Bling, além de salvar essas informações em uma collection do MongoDB.
+
 ## Requisitos
 
 - [Node v10+](https://nodejs.org/en/docs/) ou [Docker](https://docs.docker.com/)/[Docker-Compose](https://docs.docker.com/compose/)
